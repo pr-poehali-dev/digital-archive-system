@@ -9,7 +9,7 @@ export function SiteFooter() {
           <div className="flex flex-1 flex-col gap-4">
             <a href="/" className="flex items-center gap-2">
               <Icons.logo className="h-6 w-6" />
-              <span className="font-heading text-xl tracking-tight">BotMarket</span>
+              <span className="font-heading text-xl tracking-tight">Nexora</span>
             </a>
             <p className="text-muted-foreground max-w-sm opacity-70">
               Маркетплейс готовых Discord-ботов и комплексов. Автоматизируйте свой сервер без единой строки кода.
