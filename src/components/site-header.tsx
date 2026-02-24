@@ -41,7 +41,7 @@ export function SiteHeader() {
         scrollPosition > 10 ? "bg-background/80 backdrop-blur-lg border-b border-border/40" : "bg-transparent",
       )}
     >
-      <div className="container px-4 md:px-6 flex h-16 items-center justify-between">
+      <div className="container px-4 md:px-6 flex h-16 items-center justify-between mx-0">
         <a href="/" className="flex items-center space-x-2 z-10">
           <Icons.logo className="h-6 w-6" />
           <span className="font-heading text-xl tracking-tight">Nexora</span>

@@ -44,7 +44,7 @@ export function HeroSection() {
             >
               <motion.div className="space-y-4" variants={itemVariants}>
                 {/* Modern Hero Header with Gradient */}
-                <h1 className="text-4xl font-heading font-bold tracking-tighter sm:text-5xl xl:text-7xl/none">
+                <h1 className="text-4xl font-heading font-bold tracking-tighter sm:text-5xl xl:text-7xl/none mx-0">
                   <span className="gradient-text">Discord-боты</span>
                   <br />
                   <span className="text-foreground">для вашего сервера</span>

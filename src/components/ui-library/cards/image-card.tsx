@@ -90,7 +90,7 @@ export function ImageCard({
         </motion.div>
 
         <motion.div
-          className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4"
+          className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4 py-0 rounded-lg"
           variants={variants["hover-reveal"]}
           animate="overlay"
           initial={{ opacity: variant === "hover-reveal" ? 0 : 1 }}
