@@ -8,9 +8,9 @@ import { motion } from "framer-motion"
 export function PricingSection() {
   const plans = [
     {
-      name: "Одиночный бот",
-      description: "Один бот на выбор для решения конкретной задачи.",
-      price: "990 ₽",
+      name: "Бесплатный",
+      description: "Попробуй основные возможности без вложений.",
+      price: "0 ₽",
       duration: "в месяц",
       features: [
         "1 бот на выбор",
@@ -19,13 +19,13 @@ export function PricingSection() {
         "Поддержка по почте",
         "Обновления включены",
       ],
-      cta: "Выбрать бота",
+      cta: "Начать бесплатно",
       popular: false,
     },
     {
-      name: "Комплекс",
+      name: "Стандарт",
       description: "Готовый набор ботов для полноценного сервера.",
-      price: "2 490 ₽",
+      price: "200 ₽",
       duration: "в месяц",
       features: [
         "5 ботов в комплекте",
@@ -36,13 +36,13 @@ export function PricingSection() {
         "Приоритетные обновления",
         "Персональная настройка",
       ],
-      cta: "Выбрать комплекс",
+      cta: "Выбрать Стандарт",
       popular: true,
     },
     {
-      name: "Сервер под ключ",
+      name: "Премиум",
       description: "Полная автоматизация и кастомизация под ваш бренд.",
-      price: "от 7 900 ₽",
+      price: "600 ₽",
       duration: "в месяц",
       features: [
         "Все боты из каталога",
@@ -54,7 +54,7 @@ export function PricingSection() {
         "Интеграции по запросу",
         "SLA-гарантия работы",
       ],
-      cta: "Обсудить проект",
+      cta: "Выбрать Премиум",
       popular: false,
     },
   ]
