@@ -1,4 +1,4 @@
-import { Code, Layers, Palette, Sparkles, Zap, Shield } from "lucide-react"
+import { Bot, Layers, Users, Sparkles, Zap, Shield } from "lucide-react"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ScrollReveal } from "@/components/scroll-reveal"
@@ -11,44 +11,44 @@ import { ProgressCard } from "@/components/ui-library/cards/progress-card"
 export function FeaturesSection() {
   const features = [
     {
-      icon: <Layers className="h-10 w-10 text-red-500" />,
-      title: "Модульные компоненты",
-      description: "Собирайте сложные интерфейсы из переиспользуемых компонентов.",
+      icon: <Bot className="h-10 w-10 text-red-500" />,
+      title: "Готовые боты",
+      description: "Более 30 ботов на любой случай: модерация, музыка, экономика, мини-игры и многое другое.",
       progress: 100,
       borderClass: "border-glow-red",
     },
     {
-      icon: <Palette className="h-10 w-10 text-blue-500" />,
-      title: "Гибкие темы",
-      description: "Легко настраивайте цвета, шрифты и стили под ваш бренд.",
+      icon: <Layers className="h-10 w-10 text-blue-500" />,
+      title: "Комплексы ботов",
+      description: "Наборы ботов, которые работают вместе: полная экосистема для вашего сервера под ключ.",
       progress: 90,
       borderClass: "border-glow-blue",
     },
     {
       icon: <Zap className="h-10 w-10 text-yellow-500" />,
-      title: "Высокая скорость",
-      description: "Легковесные компоненты для быстрой загрузки и работы.",
+      title: "Быстрое подключение",
+      description: "Бот на сервере за 2 минуты. Никаких технических знаний — просто нажмите «Добавить».",
       progress: 95,
       borderClass: "border-glow-yellow",
     },
     {
-      icon: <Code className="h-10 w-10 text-green-500" />,
-      title: "TypeScript из коробки",
-      description: "Полная типизация для лучшего DX и меньше багов.",
+      icon: <Users className="h-10 w-10 text-green-500" />,
+      title: "Управление сообществом",
+      description: "Автомодерация, верификация участников, уровни, роли и автоприветствия.",
       progress: 100,
       borderClass: "border-glow-green",
     },
     {
       icon: <Sparkles className="h-10 w-10 text-purple-500" />,
-      title: "Анимации",
-      description: "Красивые анимации и переходы на базе Framer Motion.",
+      title: "Развлечения и игры",
+      description: "Мини-игры, викторины, музыка и экономика для удержания аудитории на сервере.",
       progress: 85,
       borderClass: "border-glow-purple",
     },
     {
       icon: <Shield className="h-10 w-10 text-orange-500" />,
-      title: "Доступность",
-      description: "Компоненты соответствуют стандартам WCAG для всех пользователей.",
+      title: "Безопасность",
+      description: "Защита от спама, рейдов и токсичного контента — ваш сервер под надёжной охраной.",
       progress: 92,
       borderClass: "border-glow-orange",
     },
@@ -63,13 +63,13 @@ export function FeaturesSection() {
           <div className="flex flex-col items-center justify-center space-y-6 text-center mb-12">
             <div className="space-y-4">
               <AnimatedText
-                text="Возможности для современной веб-разработки"
+                text="Всё для вашего Discord-сервера"
                 variant="heading"
                 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl gradient-text"
                 animation="slide"
               />
               <AnimatedText
-                text="Наша библиотека содержит все необходимое для создания красивых, интерактивных и доступных веб-приложений."
+                text="От базовой модерации до полноценной экономики — у нас есть бот для каждой задачи. Выбирайте отдельных ботов или готовые комплексы."
                 variant="paragraph"
                 className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
                 animation="fade"

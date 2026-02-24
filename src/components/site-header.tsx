@@ -10,8 +10,8 @@ import { useScrollPosition } from "@/hooks/use-scroll-position"
 
 const navItems = [
   { name: "Главная", href: "#home" },
-  { name: "Функции", href: "#features" },
-  { name: "Компоненты", href: "#components" },
+  { name: "Возможности", href: "#features" },
+  { name: "Боты", href: "#components" },
   { name: "Отзывы", href: "#testimonials" },
   { name: "Цены", href: "#pricing" },
   { name: "Блог", href: "#blog" },
@@ -40,7 +40,7 @@ export function SiteHeader() {
       <div className="container px-4 md:px-6 flex h-16 items-center justify-between">
         <a href="/" className="flex items-center space-x-2 z-10">
           <Icons.logo className="h-6 w-6" />
-          <span className="font-heading text-xl tracking-tight">PixelForge</span>
+          <span className="font-heading text-xl tracking-tight">BotMarket</span>
         </a>
 
         {/* Desktop Navigation - Hidden on mobile */}
@@ -72,8 +72,8 @@ export function SiteHeader() {
               <a href="#login">Войти</a>
             </Button>
             <Button size="sm" className="neumorphic-button-primary" asChild>
-              <a href="#register">
-                Начать
+              <a href="#pricing">
+                Добавить бота
                 <motion.div
                   className="ml-1"
                   animate={{ x: [0, 3, 0] }}
@@ -116,7 +116,7 @@ export function SiteHeader() {
               <div className="flex items-center justify-between p-4 border-b border-border">
                 <a href="/" className="flex items-center space-x-2" onClick={closeMobileMenu}>
                   <Icons.logo className="h-6 w-6" />
-                  <span className="font-heading text-lg">PixelForge</span>
+                  <span className="font-heading text-lg">BotMarket</span>
                 </a>
                 <button
                   onClick={closeMobileMenu}

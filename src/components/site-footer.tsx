@@ -9,11 +9,10 @@ export function SiteFooter() {
           <div className="flex flex-1 flex-col gap-4">
             <a href="/" className="flex items-center gap-2">
               <Icons.logo className="h-6 w-6" />
-              <span className="font-heading text-xl tracking-tight">PixelForge</span>
+              <span className="font-heading text-xl tracking-tight">BotMarket</span>
             </a>
             <p className="text-muted-foreground max-w-sm opacity-70">
-              Современная библиотека UI-компонентов на базе shadcn/ui и Aceternity UI для веб-разработчиков и дизайнеров
-              в сфере AI-софта.
+              Маркетплейс готовых Discord-ботов и комплексов. Автоматизируйте свой сервер без единой строки кода.
             </p>
             <div className="flex gap-4">
               <a href="https://twitter.com" target="_blank" rel="noreferrer" className="glassmorphic-icon">
@@ -39,7 +38,7 @@ export function SiteFooter() {
                     href="#features"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
-                    Функции
+                    Возможности
                   </a>
                 </li>
                 <li>
@@ -55,15 +54,15 @@ export function SiteFooter() {
                     href="#components"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
-                    Компоненты
+                    Каталог ботов
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#changelog"
+                    href="#testimonials"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
-                    Изменения
+                    Отзывы
                   </a>
                 </li>
               </ul>
@@ -89,10 +88,10 @@ export function SiteFooter() {
                 </li>
                 <li>
                   <a
-                    href="#careers"
+                    href="#faq"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
-                    Вакансии
+                    FAQ
                   </a>
                 </li>
                 <li>
@@ -146,7 +145,7 @@ export function SiteFooter() {
         </div>
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <p className="text-sm text-muted-foreground opacity-70">
-            &copy; {new Date().getFullYear()} PixelForge. Все права защищены.
+            &copy; {new Date().getFullYear()} BotMarket. Все права защищены.
           </p>
           <div className="flex gap-4">
             <a

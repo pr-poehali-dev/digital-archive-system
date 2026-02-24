@@ -14,13 +14,13 @@ export function CtaSection() {
           <div className="flex flex-col items-center justify-center space-y-6 text-center">
             <div className="space-y-4">
               <AnimatedText
-                text="Готовы создавать крутые интерфейсы?"
+                text="Готовы прокачать свой Discord-сервер?"
                 variant="heading"
                 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl gradient-text"
                 animation="wave"
               />
               <AnimatedText
-                text="Начните работу с нашей библиотекой уже сегодня и измените подход к веб-разработке."
+                text="Подключите бота уже сегодня — и ваш сервер начнёт жить своей жизнью. Без кода, без лишних усилий."
                 variant="paragraph"
                 className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
                 animation="fade"
@@ -42,7 +42,7 @@ export function CtaSection() {
                 asChild
               >
                 <a href="#pricing" className="flex items-center">
-                  Начать
+                  Выбрать бота
                   <motion.span
                     className="ml-2 inline-block"
                     animate={{ x: [0, 5, 0] }}
@@ -59,7 +59,7 @@ export function CtaSection() {
                 duration={6}
               >
                 <OutlineButton size="lg" className="bg-background w-full h-full border-0 px-8 py-3" asChild>
-                  <a href="#components">Компоненты</a>
+                  <a href="#features">Все возможности</a>
                 </OutlineButton>
               </AnimatedGradientBorder>
             </motion.div>

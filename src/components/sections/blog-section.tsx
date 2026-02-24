@@ -5,22 +5,22 @@ import { ArrowRight } from "lucide-react"
 export function BlogSection() {
   const blogPosts = [
     {
-      title: "Создание современных UI с PixelForge",
-      description: "Узнайте, как создавать красивые интерфейсы с нашей библиотекой компонентов.",
-      date: "15 мая 2023",
+      title: "Топ-5 ботов для модерации в 2025",
+      description: "Сравниваем лучших ботов-модераторов: функции, скорость реакции и удобство настройки.",
+      date: "10 февраля 2025",
       readTime: "5 мин",
     },
     {
-      title: "Мощь Tailwind CSS и React",
-      description: "Как Tailwind CSS и React могут преобразить ваш рабочий процесс разработки.",
-      date: "28 апреля 2023",
+      title: "Как удержать участников на сервере",
+      description: "Разбираем механики вовлечения: экономика, уровни, ивенты и роли — что реально работает.",
+      date: "28 января 2025",
       readTime: "7 мин",
     },
     {
-      title: "Доступные компоненты",
-      description: "Лучшие практики создания UI-компонентов, доступных для всех пользователей.",
-      date: "10 апреля 2023",
-      readTime: "6 мин",
+      title: "Комплекс vs одиночный бот: что выбрать?",
+      description: "Гид для владельцев серверов: когда хватит одного бота, а когда нужен полноценный комплект.",
+      date: "15 января 2025",
+      readTime: "4 мин",
     },
   ]
 
@@ -30,9 +30,9 @@ export function BlogSection() {
         <ScrollReveal>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl">Статьи</h2>
+              <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl">Блог и гайды</h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70">
-                Будьте в курсе наших новостей, туториалов и лучших практик.
+                Советы по развитию Discord-серверов, обзоры ботов и лучшие практики для администраторов.
               </p>
             </div>
           </div>
