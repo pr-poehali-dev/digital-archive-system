@@ -44,7 +44,7 @@ export function SiteHeader() {
       <div className="container px-4 md:px-6 flex h-16 items-center justify-between">
         <a href="/" className="flex items-center space-x-2 z-10">
           <Icons.logo className="h-6 w-6" />
-          <span className="font-heading text-xl tracking-tight">BotMarket</span>
+          <span className="font-heading text-xl tracking-tight">Nexora</span>
         </a>
 
         {/* Desktop Navigation - Hidden on mobile */}
