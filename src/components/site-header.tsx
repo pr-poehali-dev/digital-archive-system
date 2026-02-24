@@ -1,12 +1,14 @@
 import * as React from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { List, X } from "lucide-react"
+import { useNavigate } from "react-router-dom"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/mode-toggle"
 import { Icons } from "@/components/icons"
 import { useScrollPosition } from "@/hooks/use-scroll-position"
+import { useAuth } from "@/contexts/AuthContext"
 
 const navItems = [
   { name: "Главная", href: "#home" },
@@ -21,6 +23,8 @@ const navItems = [
 export function SiteHeader() {
   const scrollPosition = useScrollPosition()
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
+  const { user, login } = useAuth()
+  const navigate = useNavigate()
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
@@ -68,21 +72,34 @@ export function SiteHeader() {
 
           {/* Desktop CTA Buttons - Hidden on mobile */}
           <div className="hidden md:flex items-center space-x-2">
-            <Button variant="ghost" size="sm" className="neumorphic-button" asChild>
-              <a href="#login">Войти</a>
-            </Button>
-            <Button size="sm" className="neumorphic-button-primary" asChild>
-              <a href="#pricing">
-                Добавить бота
-                <motion.div
-                  className="ml-1"
-                  animate={{ x: [0, 3, 0] }}
-                  transition={{ repeat: Infinity, repeatDelay: 3, duration: 0.8 }}
-                >
-                  {'>'}
-                </motion.div>
-              </a>
-            </Button>
+            {user ? (
+              <button
+                onClick={() => navigate("/profile")}
+                className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-border/40 bg-background/60 hover:bg-muted transition-colors"
+              >
+                <img src={user.avatar_url} alt={user.username} className="w-6 h-6 rounded-full" />
+                <span className="text-sm font-medium">{user.username}</span>
+              </button>
+            ) : (
+              <>
+                <Button variant="ghost" size="sm" className="neumorphic-button" onClick={login}>
+                  <img src="https://store.steampowered.com/favicon.ico" alt="Steam" className="w-4 h-4 mr-1" />
+                  Войти через Steam
+                </Button>
+                <Button size="sm" className="neumorphic-button-primary" asChild>
+                  <a href="#pricing">
+                    Добавить бота
+                    <motion.div
+                      className="ml-1"
+                      animate={{ x: [0, 3, 0] }}
+                      transition={{ repeat: Infinity, repeatDelay: 3, duration: 0.8 }}
+                    >
+                      {'>'}
+                    </motion.div>
+                  </a>
+                </Button>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button - Only visible on mobile */}
@@ -149,18 +166,20 @@ export function SiteHeader() {
               </div>
 
               <div className="mt-auto p-4 border-t border-border">
-                <div className="grid grid-cols-2 gap-3">
-                  <Button variant="outline" className="w-full" asChild>
-                    <a href="#login" onClick={closeMobileMenu}>
-                      Войти
-                    </a>
+                {user ? (
+                  <button
+                    className="w-full flex items-center gap-3 px-4 py-3 rounded-md hover:bg-muted transition-colors"
+                    onClick={() => { navigate("/profile"); closeMobileMenu() }}
+                  >
+                    <img src={user.avatar_url} alt={user.username} className="w-8 h-8 rounded-full" />
+                    <span className="font-medium">{user.username}</span>
+                  </button>
+                ) : (
+                  <Button className="w-full" onClick={() => { login(); closeMobileMenu() }}>
+                    <img src="https://store.steampowered.com/favicon.ico" alt="Steam" className="w-4 h-4 mr-2" />
+                    Войти через Steam
                   </Button>
-                  <Button className="w-full neumorphic-button-primary" asChild>
-                    <a href="#register" onClick={closeMobileMenu}>
-                      Начать
-                    </a>
-                  </Button>
-                </div>
+                )}
               </div>
             </motion.div>
           </motion.div>
